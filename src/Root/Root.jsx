@@ -14,6 +14,14 @@ function Root() {
     setComponent2(<DirectoryB />);
   };
 
+  const deleteDirectoryA= ()=>{
+    setComponent1("");
+  }
+   
+  const deleteSirectoryB= ()=>{
+
+    setComponent2("");
+  }
 
   return (
     <div className="w-full bg-slate-100 h-full">
@@ -26,14 +34,14 @@ function Root() {
           >
             Directory A
           </button>
-          <h3>delete</h3>
+          <button className="mx-3 text-red-600" onClick={deleteDirectoryA}>Delete Directory</button>
           <h3>details</h3>
         </div>
         <div className="m-2">
           <button className="text-xl text-gray-900 hover:border-4 border-gray-700 rounded-lg" onClick={showdirectoryB}>
             Directory B
           </button>
-          <h3>delete</h3>
+          <button className="mx-3 text-red-500" onClick={deleteSirectoryB}>Delete Directory</button>
           <h3>details</h3>
         </div>
       </div>
